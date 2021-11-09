@@ -18,6 +18,7 @@ const success = (res, data) => {
 
 exports.register = async (req, res) => {
   try {
+    console.log(req.headers);
     const user = await new UserEntity(User).create(req);
     success(res, user);
   } catch (err) {
